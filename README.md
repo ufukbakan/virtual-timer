@@ -44,3 +44,11 @@ virtualTimer.timeout(
     1000
 );
 ```
+You may cancel your timeouts & intervals:
+```ts
+const controller = virtualTimer.timeout(
+    () => { console.log("you won't see me") },
+    1000
+);
+controller.cancel()
+```

@@ -1,13 +1,13 @@
 {
   "name": "virtual-timer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A single timer virtually runs other timers",
   "main": "index.ts",
   "scripts": {
     "test": "vitest run",
     "coverage": "vitest run --coverage && jest-coverage-badges output \"./badges\""
   },
-  "keywords": [],
+  "keywords": ["virtual", "timer", "timeout", "interval", "typescript", "javascript"],
   "author": {
     "name": "Ufuk Bakan",
     "email": "println.ufukbakan@gmail.com",

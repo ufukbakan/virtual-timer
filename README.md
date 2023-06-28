@@ -1,10 +1,10 @@
 # Virtual Timers
 
 <center>
-<img src="badges/badge-branches.svg">
-<img src="badges/badge-functions.svg">
-<img src="badges/badge-lines.svg">
-<img src="badges/badge-statements.svg">
+<img style="display: inline-block" src="https://raw.githubusercontent.com/ufukbakan/virtual-timer/master/badges/badge-branches.svg">
+<img style="display: inline-block" src="https://raw.githubusercontent.com/ufukbakan/virtual-timer/master/badges/badge-functions.svg">
+<img style="display: inline-block" src="https://raw.githubusercontent.com/ufukbakan/virtual-timer/master/badges/badge-lines.svg">
+<img style="display: inline-block" src="https://raw.githubusercontent.com/ufukbakan/virtual-timer/master/badges/badge-statements.svg">
 </center>
 
 

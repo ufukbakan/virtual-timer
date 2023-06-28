@@ -1,0 +1,25 @@
+{
+  "name": "virtual-timer",
+  "version": "1.0.0",
+  "description": "A single timer virtually runs other timers",
+  "main": "index.ts",
+  "scripts": {
+    "test": "vitest run",
+    "coverage": "vitest run --coverage && jest-coverage-badges output \"./badges\""
+  },
+  "keywords": [],
+  "author": {
+    "name": "Ufuk Bakan",
+    "email": "println.ufukbakan@gmail.com",
+    "url": "https://www.linkedin.com/in/ufuk-bakan/"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "precision-timeout-interval": "^4.3.0"
+  },
+  "devDependencies": {
+    "@vitest/coverage-istanbul": "^0.32.2",
+    "jest-coverage-badges": "^1.1.2",
+    "vitest": "^0.32.2"
+  }
+}

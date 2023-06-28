@@ -1,11 +1,13 @@
-# Virtual Timers
+<h1 align="center">
+    Virtual Timers
+</h1>
 
-<center>
-<img style="display: inline-block" src="https://raw.githubusercontent.com/ufukbakan/virtual-timer/master/badges/badge-branches.svg">
-<img style="display: inline-block" src="https://raw.githubusercontent.com/ufukbakan/virtual-timer/master/badges/badge-functions.svg">
-<img style="display: inline-block" src="https://raw.githubusercontent.com/ufukbakan/virtual-timer/master/badges/badge-lines.svg">
-<img style="display: inline-block" src="https://raw.githubusercontent.com/ufukbakan/virtual-timer/master/badges/badge-statements.svg">
-</center>
+<p align="center">
+    <img style="display: inline" src="https://raw.githubusercontent.com/ufukbakan/virtual-timer/master/badges/badge-branches.svg">
+    <img style="display: inline" src="https://raw.githubusercontent.com/ufukbakan/virtual-timer/master/badges/badge-functions.svg">
+    <img style="display: inline" src="https://raw.githubusercontent.com/ufukbakan/virtual-timer/master/badges/badge-lines.svg">
+    <img style="display: inline" src="https://raw.githubusercontent.com/ufukbakan/virtual-timer/master/badges/badge-statements.svg">
+</p>
 
 
 ## What is it

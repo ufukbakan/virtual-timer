@@ -1,0 +1,14 @@
+badges/
+**/*.test.*
+**/*.spec.*
+**/*lock*.json
+**/*lock*.yml
+**/*lock*.yaml
+**/CHANGELOG*
+.vscode/
+coverage/
+node_modules/
+.gitignore
+.gitattributes
+vitest.config.ts
+tsconfig.json

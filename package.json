@@ -1,6 +1,6 @@
 {
   "name": "virtual-timer",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A single timer virtually runs other timers",
   "main": "index.ts",
   "scripts": {
@@ -13,6 +13,7 @@
     "type": "git"
   },
   "keywords": [
+    "virtual-timer",
     "virtual",
     "timer",
     "timeout",

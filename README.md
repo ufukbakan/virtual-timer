@@ -18,6 +18,20 @@ and handles all timeouts and intervals in it.
 ## Cons
 - Performances loss when you set a few intervals & timeouts.
 
+## NextJS config
+Since the module provided as pure ts files, you need to add this config to your NextJS project:
+```js
+// next.config.mjs
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+    transpilePackages: ["virtual-timer"]
+};
+
+export default nextConfig;
+
+```
+
 ## Usage
 ```ts
 import { VirtualTimer } from "virtual-timer";

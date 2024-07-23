@@ -12,6 +12,8 @@ jobs:
       - uses: actions/checkout@v4
   codeql:
     uses: ./.github/workflows/codeql.yml
+    permissions: 
+      security-events: write
   build:
     uses: ./.github/workflows/node.js.yml
   publish:

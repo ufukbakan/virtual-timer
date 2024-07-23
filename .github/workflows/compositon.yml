@@ -3,11 +3,9 @@ on:
     branches: 
       - master
 
-jobs:
-  ci_cd_compositon:
-    name: CI/CD COMPOSITION
-    runs-on: ubuntu-latest
-    steps:
+runs:
+  using: composite
+  steps:
       - uses: ./codeql.yml
       - uses: ./node.js.yml
       - uses: ./npm-publish.yml

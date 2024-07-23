@@ -3,9 +3,15 @@ on:
     branches: 
       - master
 
-runs:
-  using: composite
-  steps:
-      - uses: ./codeql.yml
-      - uses: ./node.js.yml
-      - uses: ./npm-publish.yml
+jobs:
+  checkout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+  codeql:
+    uses: ./.github/workflows/codeql.yml
+  build:
+    uses: ./.github/workflows/npm-publish.yml
+  publish:
+    uses: ./.github/workflows/npm-publish.yml
+      

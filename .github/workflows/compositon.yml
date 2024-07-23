@@ -6,22 +6,15 @@ on:
       - master
 
 jobs:
-  checkout:
-    runs-on: ubuntu-latest
-    steps:
-      - run: pwd
-      - run: echo ${{github.workspace}}
-      - uses: actions/checkout@v4
-  # analyze:
-  #   uses: ./.github/workflows/codeql.yml
-  #   needs: checkout
-  #   permissions: 
-  #     security-events: write
-  #     packages: read
-  #     actions: read
-  #     contents: read
+  analyze:
+    uses: ./.github/workflows/codeql.yml
+    permissions: 
+      security-events: write
+      packages: read
+      actions: read
+      contents: read
   build:
-    # needs: analyze
+    needs: analyze
     uses: ./.github/workflows/node.js.yml
   publish:
     needs: build

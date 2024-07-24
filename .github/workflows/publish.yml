@@ -21,10 +21,10 @@ jobs:
       - name: Get version
         id: get-version
         run: |
-                    VERSION=$(jq -r '.version' package.json)
-                    TITLE="Release v$VERSION"  # Customize title format if needed
-                    echo "version=$VERSION" >> $GITHUB_OUTPUT
-                    echo "title=$TITLE" >> $GITHUB_OUTPUT
+              VERSION=$(jq -r '.version' package.json)
+              TITLE="Release v$VERSION"  # Customize title format if needed
+              echo "version=$VERSION" >> $GITHUB_OUTPUT
+              echo "title=$TITLE" >> $GITHUB_OUTPUT
       - name: Peek title
         run: |
               echo "Title is"
@@ -36,7 +36,7 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           prerelease: false
           title: ${{steps.get-version.outputs.title}}
-          files: *.tar
+          files: "*.tar"
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}

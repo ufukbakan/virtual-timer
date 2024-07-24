@@ -13,10 +13,10 @@ jobs:
       packages: read
       actions: read
       contents: read
-  build:
+  build and test:
     needs: analyze
     uses: ./.github/workflows/node.js.yml
-  publish:
+  npm_publish:
     needs: build
-    uses: ./.github/workflows/npm-publish.yml
+    uses: ./.github/workflows/publish.yml
       

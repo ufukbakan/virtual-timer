@@ -16,7 +16,7 @@ jobs:
           node-version: 20
           registry-url: https://registry.npmjs.org/
       - run: npm install
-      - run: npm build
+      - run: npm build --if-present
       - run: npm pack
       - name: Get version
         id: get-version

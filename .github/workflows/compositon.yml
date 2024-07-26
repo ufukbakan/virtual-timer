@@ -16,7 +16,8 @@ jobs:
   build-and-test:
     needs: analyze
     uses: ./.github/workflows/node.js.yml
-  npm_publish:
+  publish:
+    permissions: write-all
     needs: build-and-test
     uses: ./.github/workflows/publish.yml
       

@@ -30,7 +30,7 @@ jobs:
               echo "Title is"
               echo ${{steps.get-version.outputs.title}}
       - name: Automatic Releases
-        uses: marvinpinto/action-automatic-releases@v1.2.1
+        uses: marvinpinto/action-automatic-releases@latest
         with:
           automatic_release_tag: stable
           repo_token: ${{ secrets.GITHUB_TOKEN }}

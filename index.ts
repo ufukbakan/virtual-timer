@@ -1,6 +1,6 @@
 import { IntervalController, prcIntervalWithDelta } from "precision-timeout-interval";
 
-type DeltaReceivingCallback = (delta?: number) => any;
+type DeltaReceivingCallback = (delta: number) => any;
 type CallbackInfo = {
     fn: DeltaReceivingCallback,
     timeout: number,
@@ -49,7 +49,7 @@ export class VirtualTimer {
     }
 
     #remove(c: CallbackInfo) {
-        this.callbacks = this.callbacks.filter(cb => cb != c);
+        this.callbacks = this.callbacks.filter((cb) => cb !== c);
     }
 
     #mainLoop(delta: number) {

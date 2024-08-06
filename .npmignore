@@ -1,4 +1,5 @@
 badges/
+__tests__/
 **/*.test.*
 **/*.spec.*
 **/*lock*.json

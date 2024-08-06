@@ -1,11 +1,14 @@
 import { defineConfig } from 'vitest/config'
 
 export default defineConfig({
-    test: {
-        globals: true,
-        coverage: {
-            provider: "istanbul",
-            reporter: ["json-summary", "text", "html"]
-        }
+  test: {
+    globals: true,
+    isolate: true,
+    singleThread: false,
+    exclude: ["node_modules", "dist", ".idea", ".git", ".cache", "./__tests__/utils.ts"],
+    coverage: {
+      provider: "istanbul",
+      reporter: ["json-summary", "text", "html"],
     },
-})
+  },
+});

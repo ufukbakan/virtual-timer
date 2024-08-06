@@ -1,6 +1,6 @@
 {
   "name": "virtual-timer",
-  "version": "1.0.7",
+  "version": "2.0.0",
   "description": "A single timer virtually runs other timers",
   "main": "index.ts",
   "types": "index.ts",

@@ -44,7 +44,8 @@ jobs:
           prerelease: false
           title: ${{steps.get-version.outputs.title}}
           files: "*.tgz"
-      - run: pnpm login 
+      - run: echo $(npm whoami)
+      # - run: npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
       - run: pnpm publish
         env:
           NODE_AUTH_TOKEN: ${{env.NODE_AUTH_TOKEN}}

@@ -39,7 +39,4 @@ jobs:
           files: |
             *.tar
             *.tgz
-      - name: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-        run: npm publish
+      - run: npm publish

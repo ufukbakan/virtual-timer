@@ -3,8 +3,7 @@
 #
 name: "Node build, release & publish"
 
-on:
-  workflow_call
+on: workflow_call
 
 jobs:
   publish-npm:
@@ -22,14 +21,14 @@ jobs:
       - name: Get version
         id: get-version
         run: |
-              VERSION=$(jq -r '.version' package.json)
-              TITLE="Release v$VERSION"  # Customize title format if needed
-              echo "version=$VERSION" >> $GITHUB_OUTPUT
-              echo "title=$TITLE" >> $GITHUB_OUTPUT
+          VERSION=$(jq -r '.version' package.json)
+          TITLE="Release v$VERSION"  # Customize title format if needed
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "title=$TITLE" >> $GITHUB_OUTPUT
       - name: Peek title
         run: |
-              echo "Title is"
-              echo ${{steps.get-version.outputs.title}}
+          echo "Title is"
+          echo ${{steps.get-version.outputs.title}}
       - name: Automatic Releases
         uses: marvinpinto/action-automatic-releases@latest
         with:
@@ -37,7 +36,10 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           prerelease: false
           title: ${{steps.get-version.outputs.title}}
-          files: "*.tar"
-      - run: npm publish
+          files: |
+            *.tar
+            *.tgz
+      - name: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        run: npm publish

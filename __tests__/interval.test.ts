@@ -14,7 +14,7 @@ test("Test virtual intervals", async () => {
   virtualTimer.interval(incrementTicks, 500);
   virtualTimer.interval(incrementTocks, 500);
 
-  await sleep(2700);
+  await sleep(2500);
 
   expect(ticks).to.be.eq(5);
   expect(tocks).to.be.eq(5);

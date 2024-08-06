@@ -4,7 +4,7 @@ export default defineConfig({
   test: {
     globals: true,
     isolate: true,
-    singleThread: false,
+    singleThread: true,
     exclude: ["node_modules", "dist", ".idea", ".git", ".cache", "./__tests__/utils.ts"],
     coverage: {
       provider: "istanbul",

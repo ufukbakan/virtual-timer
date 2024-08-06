@@ -14,7 +14,7 @@ test("End all", async () => {
     
     virtualTimer.end();
 
-    await sleep(2700);
+    await sleep(2500);
 
     expect(ticks).to.be.eq(0);
     expect(tocks).to.be.eq(0);

@@ -14,7 +14,7 @@ test("Test virtual timeouts", async () => {
   virtualTimer.timeout(incrementTicks, 500);
   virtualTimer.timeout(incrementTocks, 500);
 
-  await sleep(2700);
+  await sleep(2500);
 
   expect(ticks).to.be.eq(1);
   expect(tocks).to.be.eq(1);

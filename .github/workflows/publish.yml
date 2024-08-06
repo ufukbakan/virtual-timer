@@ -40,3 +40,5 @@ jobs:
             *.tar
             *.tgz
       - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{env.NODE_AUTH_TOKEN}}

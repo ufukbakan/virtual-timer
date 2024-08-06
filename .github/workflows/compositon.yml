@@ -21,4 +21,4 @@ jobs:
     needs: build-and-test
     uses: ./.github/workflows/publish.yml
     with:
-      npm_token: ${{secrets.NPM_TOKEN}}
+      npm_token: ${{github.env.NPM_TOKEN}}

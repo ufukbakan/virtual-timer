@@ -44,6 +44,7 @@ jobs:
           prerelease: false
           title: ${{steps.get-version.outputs.title}}
           files: "*.tgz"
+      - run: pnpm login 
       - run: pnpm publish
         env:
           NODE_AUTH_TOKEN: ${{env.NODE_AUTH_TOKEN}}

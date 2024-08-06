@@ -10,7 +10,7 @@
   },
   "homepage": "https://github.com/ufukbakan/virtual-timer#readme",
   "repository": {
-    "url": "https://github.com/ufukbakan/virtual-timer",
+    "url": "git+https://github.com/ufukbakan/virtual-timer",
     "type": "git"
   },
   "keywords": [

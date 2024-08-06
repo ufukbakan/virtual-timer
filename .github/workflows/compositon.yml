@@ -2,16 +2,13 @@ permissions: read-all
 
 on:
   push:
-    branches: 
+    branches:
       - master
-      
-env:
-  NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
 jobs:
   analyze:
     uses: ./.github/workflows/codeql.yml
-    permissions: 
+    permissions:
       security-events: write
       packages: read
       actions: read
@@ -23,4 +20,5 @@ jobs:
     permissions: write-all
     needs: build-and-test
     uses: ./.github/workflows/publish.yml
-      
+    with:
+      npm_token: ${{secrets.NPM_TOKEN}}

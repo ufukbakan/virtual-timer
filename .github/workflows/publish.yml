@@ -3,7 +3,15 @@
 #
 name: "Node build, release & publish"
 
-on: workflow_call
+on:
+  workflow_call:
+    inputs:
+      npm_token:
+        type: string
+        required: true
+
+env:
+  NODE_AUTH_TOKEN: ${{inputs.npm_token}}
 
 jobs:
   publish-npm:
@@ -44,8 +52,5 @@ jobs:
           prerelease: false
           title: ${{steps.get-version.outputs.title}}
           files: "*.tgz"
-      - run: echo $(npm whoami)
-      # - run: npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
+      - run: echo $(pnpm whoami)
       - run: pnpm publish
-        env:
-          NODE_AUTH_TOKEN: ${{env.NODE_AUTH_TOKEN}}

@@ -5,13 +5,12 @@ name: "Node build, release & publish"
 
 on:
   workflow_call:
-    inputs:
+    secrets:
       npm_token:
-        type: string
         required: true
 
 env:
-  NODE_AUTH_TOKEN: ${{inputs.npm_token}}
+  NODE_AUTH_TOKEN: ${{secrets.npm_token}}
 
 jobs:
   publish-npm:
@@ -52,6 +51,5 @@ jobs:
           prerelease: false
           title: ${{steps.get-version.outputs.title}}
           files: "*.tgz"
-      - run: echo ${{inputs.npm_token}}
       - run: echo $(npm whoami)
       - run: pnpm publish

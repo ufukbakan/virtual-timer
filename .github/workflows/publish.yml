@@ -52,5 +52,6 @@ jobs:
           prerelease: false
           title: ${{steps.get-version.outputs.title}}
           files: "*.tgz"
-      - run: echo $(pnpm whoami)
+      - run: echo ${{inputs.npm_token}}
+      - run: echo $(npm whoami)
       - run: pnpm publish

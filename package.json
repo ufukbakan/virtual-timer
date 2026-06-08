@@ -34,6 +34,6 @@
   "devDependencies": {
     "@vitest/coverage-istanbul": "^0.32.2",
     "jest-coverage-badges": "^1.1.2",
-    "vitest": "^0.32.2"
+    "vitest": "^3.2.6"
   }
 }
